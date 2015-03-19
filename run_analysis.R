@@ -127,7 +127,14 @@ completeDataSet <- rbind(trainDataSet, testDataSet)
 #### Remove all columns except means and stds
 ###############################################################################
 
+smallDataSet <- select(completeDataSet, 
+                       SubjectID, 
+                       ActivityID, 
+                       ActivityName, 
+                       contains("mean"), 
+                       contains("std"))
 
+smallDataSet <- tbl_df(smallDataSet)
 
 ###############################################################################
 #### Create the summarized data set

@@ -13,4 +13,4 @@ dim(trainLabelDT)
 dim(trainDT)
 dim(trainDataSet)
 dim(completeDataSet)
-
+dim(smallDataSet)
